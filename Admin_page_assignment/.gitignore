@@ -1,8 +1,0 @@
-node_modules/
-build/
-dist/
-.env
-*.sqlite
-*.db
-.DS_Store
-Thumbs.db
