@@ -1,0 +1,411 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Minds</title>
+    <link rel="stylesheet" href="Untitled-2.css">
+    <style>
+        section{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to bottom, #eeeb54, #f9f7e4 );
+        }
+        #type{
+            padding:10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            color:#333 ;
+            width: 370px;
+            margin-bottom:160px;
+        }
+        #tips-container{
+           padding: 1rem ; 
+           display: flex;
+           align-items: flex-start;/*aligning items to the start of the flex container's main axis to control the positioning of items in a layout.*/
+           flex-wrap: wrap;
+        }
+        .tips-card{
+            width: 280px;
+            border: 3px solid yellowgreen;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 1rem;
+            margin: 10px;
+            height:400px;
+            overflow-y:scroll; /*scroll down if text exceeds the card*/
+        }
+        .tips-card::-webkit-scrollbar{
+            display: none;
+        }
+        .tips-card img{
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        .tips-card:hover{
+            box-shadow: 4px 4px 10px ;
+        }
+        .tips-card h2{
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+        .tips-card p{
+            font-size: 1.2rem;
+            padding-top: 0.7rem;
+        }
+        h1{
+          text-align: center;
+        }
+        .navbar1{
+         padding: 1.3rem;
+         color: white;
+         letter-spacing: 2px;
+         margin-top:160px;
+         }
+        .links-container{
+          width:800px;
+         }
+
+         #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow: auto; /*  scrolling down if content is too tall */
+        }
+        #overlay .tips-card {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+            max-height: 90%;
+            overflow: scroll;
+            background: white;
+            border: 3px solid yellowgreen;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        #overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: grey;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: black;
+            
+        }
+        .know{
+          color: blue;
+          font-weight: bold;
+        }
+
+
+</style>
+</head>
+<body>
+
+
+<nav>
+ 
+  <nav>
+    <div class='links-container'>
+       <a href="Main_page.html" class="home-link">Healing Minds</a>
+       <a href="Aboutus.html" class='about'>About Healing Minds</a>
+       <a href="feedback.html" class='feedback'>Feedback</a>
+    </div>
+  </nav>
+ 
+  <div class="navbar1">
+    <div class="searchengine">
+     <input type="search" placeholder="Please state your problem here" id="type" onkeyup="search()">
+    </div>
+  </div>
+
+</nav>
+      
+  <div>
+    <h1>I want help</h1>
+  </div>  
+
+  <p class="know">(Click or scroll down on the articles below to read exciting contents!)</p>
+
+<section id="tips-container">
+    
+    <div class="tips-card" onclick="showFullScreen(this)">
+        <img src="https://img.freepik.com/premium-vector/sad-tired-businessman-with-depression-sitting-floor-cartoon-vector-illustration_76775-257.jpg" alt="">
+        <h2>Tips to Manage and Alleviate Depression</h2>
+        <p>Depression is a common and serious mental
+         health condition that can affect every aspect
+         of your life. While it can feel overwhelming,
+         there are effective strategies and treatments
+         that can help you manage and alleviate your
+         symptoms. Here are some tips to help you cope
+         with depression.
+        </p>
+        <br>
+        <ol>
+           <li>
+            <h3>Seek Professional Help</h3>
+            <p>
+            The first and most important step is to seek help
+            from a mental health professional. Therapists,
+            psychologists, and psychiatrists can provide valuable
+            support, diagnose your condition, and offer treatments
+            such as therapy and medication tailored to your needs.
+            Or, you can also call the hotlines that are present 
+            at the bottom of our homepage.
+            </p>
+           </li>
+           <br>
+           <li>
+            <h3>Practice Mindfulness and Relaxation Techniques</h3>
+            <p>
+            Mindfulness, meditation, and relaxation exercises
+             can help reduce stress and improve your mental
+             well-being. Techniques such as deep breathing,
+             progressive muscle relaxation, and guided imagery
+             can help calm your mind.  
+            </p>
+           </li>
+           <br>
+           <li>
+            <h3>Get Enough Sleep</h3>
+            <p>
+            Poor sleep can contribute to depression. Establish
+            a regular sleep routine by going to bed and waking
+             up at the same time each day. Create a restful
+             environment, avoid screens before bedtime, and
+             practice good sleep hygiene.   
+            </p>
+            <p>Managing depression is a journey that requires
+             patience and persistence. By incorporating these
+             tips into your daily life, you can take proactive
+             steps to improve your mental health. Remember,
+             it’s important to seek professional help and not
+             to hesitate in asking for support from friends and
+             family. You are not alone, and there are resources
+             and strategies available to help you through this.</p>
+           </li>
+        </ol>
+    </div>
+    
+    <div class="tips-card" onclick="showFullScreen(this)">
+        <img src="https://media.tokitus.com/images/blog/a-woman-with-low-self-confidence-sitting-on-the-floor-6nvHuT.jpeg" alt="">
+        <h2>Feeling a Lack of Confidence? This is for You.</h2>
+        <p>Self-confidence is a crucial aspect of mental well-being.
+         It allows us to face challenges head-on, pursue our goals, 
+         and maintain healthy relationships. However, many of us 
+         struggle with low self-esteem at some point in our lives. 
+         If you're feeling unsure of yourself, don't worry—building 
+         self-confidence is a journey, and with the right strategies, 
+         you can make significant strides. Here are some tips to help 
+         you boost your confidence.
+        </p>
+        </br>
+        <ol>
+            <li>
+                <h3>Understand Your Strengths and Weaknesses</h3>
+                <p>To build confidence, start by recognizing your 
+                strengths and weaknesses. Make a list of your positive
+                 traits, skills, and achievements. Acknowledging your
+                 abilities will help reinforce your self-worth. At the
+                 same time, identify areas where you want to improve and
+                 set realistic goals to work on them.
+                </p>
+            </li>
+            <br>
+            <li>
+                <h3>Surround Yourself with Positive People</h3>
+                <p>
+                The people you spend time with can significantly
+                impact your self-esteem. Surround yourself with
+                 supportive, positive individuals who encourage
+                  you and believe in your abilities. Avoid those 
+                  who bring you down or make you doubt yourself.  
+                </p>
+            </li>
+            <br>
+            <li>
+                <h3>Develop a Growth Mindset</h3>
+                <p>Embrace a growth mindset, which involves
+                 believing that your abilities and intelligence
+                  can be developed through dedication and
+                 hard work. This perspective encourages you to 
+                 view challenges as opportunities to grow rather
+                 than as threats to your self-worth.</p>
+                <p>
+                Building self-confidence is a continuous
+                 journey that requires effort and patience.
+                 By understanding your strengths, setting
+                 achievable goals, practicing self-care, and
+                 surrounding yourself with positive influences,
+                 you can enhance your self-esteem and lead a more
+                 fulfilling life. Remember, confidence is not about
+                 being perfect—it's about believing in your ability
+                 to grow and succeed.
+                </p>
+            </li>
+        </br>    
+        </ol>
+    
+    </div>
+    
+    <div class="tips-card" onclick="showFullScreen(this)" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1aJ8mD3ch0pU3e924aHJZv14c1TsyH061iA&s" alt="">
+        <h2>Managing stress in daily life</h2>
+        <p>Managing stress in everyday life is essential for maintaining overall well-being. Here are some strategies that can help:</p>
+        <ol>
+
+        <li><h3>Identify Stressors</h3>
+        <ul>Keep a Journal: Write down what causes you stress and how you respond to it.</ul>
+        <ul>Recognize Patterns: Understanding your triggers can help you manage them better.</ul>
+      </li>
+
+    <li><h3>Practice Mindfulness and Relaxation Techniques</h3>
+    
+   <ul> Regular practice can help calm your mind.</ul>
+  <ul>   Breathing: Simple deep breathing exercises can reduce stress.</ul>
+       <ul> Yoga: Combines physical postures, breathing exercises, and meditation.</ul>
+      </li>
+
+    <li><h3> Maintain a Healthy Lifestyle</h3>
+   
+        <ul>Exercise Regularly: Physical activity releases endorphins, which can improve your mood.</ul>
+        <ul> Diet: Eating nutritious food can impact your mood and energy levels.</ul>
+        <ul>Adequate Sleep: Aim for 7-9 hours of sleep per night.</ul>
+    
+  </li>
+    <li> <h3> Time Management</h3>
+    <ul>
+        Prioritize Tasks: Focus on what's important and urgent.</ul>
+        <ul>Break Tasks into Smaller Steps:Makes large tasks less overwhelming.</ul>
+        <ul>Set Realistic Goals: Avoid setting yourself up for failure.</ul>
+    </ul>
+  </li>
+   <li> <h3> Stay Connected</h3>
+    <ul>
+        Social Support:Spend time with friends and family.</ul>
+     <ul>   Communication: Talk about your feelings with someone you trust.</ul>
+    </li>
+
+    
+  </ol>
+    </div>
+    
+    <div class="tips-card" onclick="showFullScreen(this)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd0liZAPGYitH8By6xUwEQAGRdIhki4HhTMQ&s" alt="">
+        <h2>Coping with anxiety: Practical tips and techniques </h2>
+        <p> Here are some general tips and techniques for coping with anxiety:
+        </p>
+        
+        <ol>
+
+        <li><h3>Identify Stressors</h3>
+        <ul>Keep a Journal: Write down what causes you stress and how you respond to it.</ul>
+        <ul>Recognize Patterns: Understanding your triggers can help you manage them better.</ul>
+      </li>
+
+    <li><h3>Practice Mindfulness and Relaxation Techniques</h3>
+    
+   <ul> Regular practice can help calm your mind.</ul>
+  <ul>   Breathing: Simple deep breathing exercises can reduce stress.</ul>
+       <ul> Yoga: Combines physical postures, breathing exercises, and meditation.</ul>
+      </li>
+
+    <li><h3> Maintain a Healthy Lifestyle</h3>
+   
+        <ul>Exercise Regularly: Physical activity releases endorphins, which can improve your mood.</ul>
+        <ul> Diet: Eating nutritious food can impact your mood and energy levels.</ul>
+        <ul>Adequate Sleep: Aim for 7-9 hours of sleep per night.</ul>
+    
+  </li>
+    <li> <h3> Time Management</h3>
+    <ul>
+        Prioritize Tasks: Focus on what's important and urgent.</ul>
+        <ul>Break Tasks into Smaller Steps:Makes large tasks less overwhelming.</ul>
+        <ul>Set Realistic Goals: Avoid setting yourself up for failure.</ul>
+    </ul>
+  </li>
+   <li> <h3> Stay Connected</h3>
+    <ul>
+        Social Support:Spend time with friends and family.</ul>
+     <ul>   Communication: Talk about your feelings with someone you trust.</ul>
+    </li>
+
+    
+  </ol>
+    </div>
+    
+</section>
+
+<!-- Fullscreen overlay -->
+<div id="overlay">
+  <button class="close-btn" onclick="closeFullScreen()">&times;</button>
+</div>
+
+
+<script type="text/javascript">
+
+function showFullScreen(card) {
+   const overlay = document.getElementById('overlay');
+   const overlayContent = document.createElement('div');
+   overlayContent.className = 'tips-card';
+   const close = document.querySelector('.close-btn');
+
+   // Clone the clicked card's content and add it to the overlay//
+   overlayContent.innerHTML = card.innerHTML;
+
+   // Clear previous content//
+   overlay.innerHTML = '';
+   overlay.appendChild(overlayContent);
+   overlay.appendChild(close);   
+               
+   overlay.style.display = 'flex';
+}
+
+function closeFullScreen() {
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+}
+
+
+//search engine//
+const search = function() {
+  const searchbox = document.getElementById('type').value.toUpperCase();
+  const tipitems = document.getElementById('tips-container');
+  const items = document.querySelectorAll('.tips-card');
+  const itmname = document.getElementsByTagName('h2');
+  
+  for(let i=0; i < itmname.length; i++){
+    let match = items[i].getElementsByTagName('h2')[0];
+    
+    if(match){
+      let textvalue = match.innerText;
+      
+      if(textvalue.toUpperCase().indexOf(searchbox) >= 0){
+        items[i].style.display = 'block';
+      }
+      else{
+        items[i].style.display = 'none';
+      }
+    }
+  }
+}
+</script>
+</body>
+
+</html>
