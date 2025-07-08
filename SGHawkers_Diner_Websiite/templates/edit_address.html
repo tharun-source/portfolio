@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit address</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #007bff;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 45%;
+            padding: 8px;
+            margin: 9px  ;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Edit Address{% endblock %}
+
+    {% block content %}
+    <form method="POST">
+        <label>Street:</label>
+        <input type="text" name="street" value="{{ address.street }}" required>
+        <br>
+        <label>Block:</label>
+        <input type="text" name="block" value="{{ address.block }}" required>
+        <br>
+        <label>Unit:</label>
+        <input type="text" name="unit" value="{{ address.unit }}" required>
+        <br>
+        <label>Postal Code:</label>
+        <input type="text" name="postal_code" value="{{ address.postal_code }}" required>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

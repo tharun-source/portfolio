@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SgHawkers</title>
+  <style type="text/css">
+    /* General Reset */
+     * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: Arial, sans-serif;
+       }
+
+/* Body */
+     body {
+        background-color: #ffffff;
+        color: #333;
+        text-align: left;
+        }
+
+/* Landing Page */
+     .landing-page h1 {
+        font-size: 3rem;
+        margin-top: 40px;
+        line-height: 1.2;
+        margin-left: 140px;
+     }
+
+     .landing-page p {
+        margin: 20px 0;
+        margin-left: 140px;
+        color: #555;
+    }
+
+  .button-container a {
+    background: #eadc9b;
+    border: 2px solid #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap; /* Prevent buttons from breaking into two lines */
+}
+
+    .button-container a:hover {
+        background-color: #ffcc00;
+    }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    align-items: center;
+    gap: 15px; /* Reduce spacing between buttons */
+    padding: 10px 0;
+    flex-wrap: wrap; /* Ensure buttons don't break awkwardly on small screens */
+}
+
+
+    .food-images{
+        position: absolute;
+        top: 20px;
+        right: 60px;
+    }
+    .food-images img {
+        width: 350px;
+        height: auto;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+/* Logo */
+    .logo{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .logo img {
+        height: 150px;
+        width: 250px;
+    }
+
+/* Footer */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #ffcc00;
+
+    }
+/* Form Container */
+    .form-container {
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffcc00;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .header img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .tabs span {
+        display: inline-block;
+        width: 50%;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+    }
+
+    .tabs .active {
+        border-bottom: 2px solid #333;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+
+    input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #333;
+        border-radius: 5px;
+    }
+
+    .forgot-pass {
+        color: #d32f2f;
+        font-size: 0.9rem;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    a {
+        background-color: #ff5722;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    a:hover {
+        background-color: #e64a19;
+    }
+
+    @media (max-width: 1024px) {
+    /* Adjust text and button margins for tablets */
+        .landing-page h1,
+        .landing-page p,
+        .button-container {
+        flex-direction: row; /* Ensure buttons remain in one line */
+        gap: 10px; /* Reduce spacing for medium screens */
+    }
+
+
+
+    /* Scale down food images */
+    .food-images img {
+         width: 250px; /* Smaller width */
+    }
+
+    /* Adjust logo size */
+    .logo img {
+         height: 120px;
+         width: 200px;
+     }
+
+    /* Footer */
+    .footer {
+        height: 80px; /* Adjust footer height */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Center-align text for mobile */
+    .landing-page h1,
+    .landing-page p {
+        margin-left: 0; /* Remove left margin */
+        text-align: center;
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 8px;
+    }
+
+    /* Food images on smaller screens */
+    .food-images {
+        position: static; /* Flow naturally */
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Stack if needed */
+    }
+
+    .food-images img {
+        width: 200px; /* Further reduce size */
+        margin: 10px;
+    }
+
+    /* Adjust logo position */
+    .logo {
+        bottom: 60px;
+    }
+
+    .footer {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller adjustments for mobile */
+    .landing-page h1 {
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    .landing-page p {
+        font-size: 0.9rem;
+    }
+
+    /* Buttons on mobile */
+    .button-container a {
+        font-size: 0.8rem; /* Reduce button size */
+        padding: 8px 15px;
+    }
+
+    /* Food images */
+    .food-images img {
+         max-width: 120px; /* Reduce logo size for small screens */
+        margin-bottom: 10px;/* Further reduce image size */
+    }
+
+    /* Footer */
+    .footer {
+        height: 50px;
+    }
+
+    .logo {
+         max-width: 120px; /* Reduce logo size for small screens */
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+         max-width: 120px; /* Reduce logo size for small screens */
+        margin-bottom: 10px;
+    }
+}
+
+
+  </style>
+
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="landing-page" id="landingPage">
+        <h1>Your Meal<br>Your Vibe<br>Your Energy</h1>
+        <p>One click away from a good experience</p>
+        <div class="button-container">
+            <a href="{{ url_for('login') }}">Log-in</a>
+            <a href="{{ url_for('signup') }}">Sign-up</a>
+        </div>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/SgHawkers_logo.png')  }}" alt="SgHawkers Logo">
+        </div>
+        <div class="food-images">
+            <img src="{{ url_for('static', filename='images/food_logo.png')  }}" alt="Food">
+        </div>
+        <div class="footer"></div>
+    </div>
+
+</body>
+</html>

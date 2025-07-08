@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9d923;
+            padding: 20px;
+        }
+        .header{
+        background: white;
+        text-align:center;
+         border-radius:10px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        input, button {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width:100%;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+       .signup-btn {
+    display: inline-block;
+    width: 20%;  /* Make button full width */
+    background-color:  #f9d923;  /* Soft red color */
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.signup-btn:hover {
+    background-color: #ffa500;
+      color:black;/* Darker red on hover */
+}
+     .admin-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .admin-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .admin-button a:hover {
+            background-color: #a71d2a;
+        }
+ </style>
+</head>
+<body>
+   <div class="form-container" id="loginPage" >
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/SgHawkers_logo.png')  }}" alt="Logo">
+            <h2>Welcome Back to Our Islandwide Hawker Experience</h2>
+        </div>
+        <form method="POST">
+            {% if error %}
+            <div class="error">{{ error }}</div>
+            {% endif %}
+            <label>Username</label>
+            <input type="text" name="username" id="username" required>
+            <label>Password</label>
+            <input type="password" name='password' id='password' placeholder="••••••••" required>
+            <button type="submit" class="login-btn">Login</button>
+            <p>Don't have an account? <a class="signup-btn" href="{{ url_for('signup') }}">Sign Up</a></p>
+            <div class="admin-button">
+           <a href="{{ url_for('admin_login') }}">Login as Admin</a>
+        </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

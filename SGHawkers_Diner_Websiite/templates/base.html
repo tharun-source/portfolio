@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align:center;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #f9c400; /* Yellow color */
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 12px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px 10px; /* Space between buttons */
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ffa500; /* Green highlight on hover */
+            color: white;
+        }
+
+        .sidebar a.active {
+            background-color: #00ff00; /* Bright green for the active link */
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Page content */
+        .content {
+            margin-left: 100px; /* Space for the sidebar */
+            padding: 20px;
+            flex-grow: 1;
+        }
+        @media (max-width: 768px){
+           .sidebar{
+               width:30%;
+
+           }
+           .content {
+                margin-left: 190px;
+            }
+        }
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 160px;
+                padding-top: 10px;
+            }
+            .sidebar a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            .content {
+                margin-left: 170px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar/Navbar -->
+    <div class="sidebar">
+        <h3>SG Hawkers</h3>
+<a href="{{ url_for('dashboard') }}" class="{% if 'dashboard' in request.endpoint or 'stall_selection' in request.endpoint or 'food_selection' in request.endpoint or 'view_cart' in request.endpoint or 'checkout' in request.endpoint %}active{% endif %}">Dashboard</a>
+<a href="{{ url_for('feedback') }}" class="{% if 'feedback' in request.endpoint %}active{% endif %}">Feedback</a>
+<a href="{{ url_for('order_history') }}" class="{% if 'order_history' in request.endpoint %}active{% endif %}">Order History</a>
+<a href="{{ url_for('address') }}" class="{% if 'address' in request.endpoint %}active{% endif %}">Addresses</a>
+<a href="{{ url_for('help_page') }}" class="{% if 'help' in request.endpoint %}active{% endif %}">Help</a>
+       <a href="{{ url_for('logout') }}" style="color: red;">Logout</a>
+
+
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ffcc00;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        img {
+            max-width: 100px;
+            margin-top: 20px;
+        }
+        .return-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .return-btn:hover {
+            background-color: #0056b3;
+        }
+        .view_feedback {
+
+            position: centre;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .view_feedback:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Dashboard{% endblock %}
+
+    {% block content %}
+    <a href="{{ url_for('feedback') }}" class="return-btn">Back</a>
+    <h1>Thank You!</h1>
+    <span style='font-size:100px;'>&#128522;</span>
+    <p>Enjoy your food!</p>
+    <a class='view_feedback' href="{{ url_for('view_feedback') }}">View Feedback</a>
+    {% endblock %}
+</body>
+</html>
