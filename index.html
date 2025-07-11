@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tharun Ranjan - Full Stack Developer Portfolio</title>
-    <style>
+       <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         
         :root {
@@ -540,35 +540,6 @@
                 font-size: 2.5rem;
             }
         }
-
-        .project-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .project-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .project-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .project-link:hover::after {
-            width: 100%;
-        }
-
         /* Achievements Section */
         .achievements-grid {
             display: grid;
@@ -608,6 +579,12 @@
         .achievement-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .achievement-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
         }
 
         .achievement-card h3 {
