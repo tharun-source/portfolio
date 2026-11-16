@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Training Simulator Showcase</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #f0e6ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(25, 20, 50, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            padding: 40px 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #c2b5e3;
+            margin-bottom: 30px;
+        }
+        .video-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        video {
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(157, 78, 221, 0.18);
+            width: 100%;
+            max-width: 600px;
+        }
+        .desc {
+            background: rgba(30, 25, 55, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #c2b5e3;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 20px 5px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#projects" style="display:inline-block;margin:24px 0 18px 0;color:#9d4edd;text-decoration:none;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;transition:color 0.2s;">← Back to Portfolio</a>
+        <h1>VR Training Simulator</h1>
+        <div class="subtitle">Wireless Player Data Export | Unity (C#) | Meta Quest 2/3 | Google Apps Script | Google Sheets</div>
+        <div class="video-section">
+            <video controls>
+                <source src="vr-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="desc">
+            <b>About the Project:</b><br>
+            As part of a team project, I co-developed the data and menu systems for a Unity VR server room training simulator on Meta Quest. My contribution included a wireless data export module that records player task results and sends them to Google Sheets, so results can be retrieved without connecting the headset to a computer.
+        </div>
+        <div class="desc">
+            <b>Key Features:</b>
+            <ul>
+                <li>Records each task's name, completion status, start and end times, and duration</li>
+                <li>Sends player results wirelessly from the headset to Google Sheets through Unity web requests and a Google Apps Script backend</li>
+                <li>Uses Android device IDs to identify headsets and timestamp-based session IDs to keep playthroughs separate</li>
+                <li>Saves a CSV backup on the device when network access is unavailable</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
